@@ -1,6 +1,6 @@
 import react from "react";
 
-const Group = ({
+const Movie = ({
     photo = "default_image.jpg",  // Provide a default image path or URL
     name = "",
     id=-1,

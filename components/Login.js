@@ -52,12 +52,15 @@ const Login = ({
         };
 
         let response = await makeTheCall(url, body);
-        debugger
+        // debugger
         if(response.ok){
             const data = await response.json();
             if(data?.success){
                 // user logged In
-                router.push('/movies');
+                router.push({
+                    pathname: '/movies',
+                    query: { movies },
+                  });
             }
             else{
                 alert(data?.message);
