@@ -21,16 +21,16 @@ const AllMovies = ({
             try {
                 // debugger
                 const hardCode = [
+                    {'id': 1, 'name': 'Inception', 'rating': 8.8},
                     {'id': 2, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8}
+                    {'id': 3, 'name': 'Inception', 'rating': 8.8},
+                    {'id': 4, 'name': 'Inception', 'rating': 8.8},
+                    {'id': 5, 'name': 'Inception', 'rating': 8.8},
+                    {'id': 6, 'name': 'Inception', 'rating': 8.8},
+                    {'id': 7, 'name': 'Inception', 'rating': 8.8},
+                    {'id': 8, 'name': 'Inception', 'rating': 8.8},
+                    {'id': 9, 'name': 'Inception', 'rating': 8.8},
+                    {'id': 10, 'name': 'Inception', 'rating': 8.8}
                 ]
                 
                 // const response = await makeTheCall('http://127.0.0.1:8000/movies/get_all_movies/', {city},'POST');
@@ -112,9 +112,6 @@ const AllMovies = ({
         'Bikaner',
       ];
 
-    
-      
-
     return (
         <div>
             <SearchableDropdown options={options}/>
@@ -122,14 +119,13 @@ const AllMovies = ({
             <div className="flex overflow-x-hidden flex-wrap">
                 {movies.map((movie) => (
                     <Movie
-                    photo="movie_photo.jpeg"   
-                    name={movie.name}
-                    id={movie.id}
-                    key={movie.id}
+                        photo="movie_photo.jpeg"   
+                        name={movie.name}
+                        id={movie.id}
+                        key={movie.id}
                     />
                 ))}
             </div>
-            
         </div>
     )
 }
