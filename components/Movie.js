@@ -1,15 +1,20 @@
 import react from "react";
 
 const Movie = ({
-    photo = "default_image.jpg",  // Provide a default image path or URL
+    photo = "movie_photo.jpeg",  // Provide a default image path or URL
     name = "",
     id=-1,
-    openTheGroup = ()=>{}
+    handleOnClick = ()=>{}
 }) => {
     return (
-        <div onClick={()=>openTheGroup(id)} className="flex">
+        <div className="flex">
             <div>
-                <img src={photo} alt="Group Icon" width="500" height="auto" />
+                <img 
+                    src={`/assets/${photo}`}
+                    alt="Group Icon" 
+                    width="200px" 
+                    height="auto" 
+                />
             </div>
             <div>
                 {name}
@@ -18,4 +23,4 @@ const Movie = ({
     )
 }
 
-export default Group;
+export default Movie;
