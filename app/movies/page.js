@@ -116,13 +116,14 @@ const AllMovies = ({
         <div>
             <SearchableDropdown options={options}/>
             Your Movies
-            <div className="flex overflow-x-hidden flex-wrap">
+            <div className="flex flex-wrap">
                 {movies.map((movie) => (
                     <Movie
                         photo="movie_photo.jpeg"   
                         name={movie.name}
                         id={movie.id}
                         key={movie.id}
+                        city={city}
                     />
                 ))}
             </div>

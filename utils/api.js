@@ -14,6 +14,7 @@ const makeTheCall = async (url, body = null, method = 'GET') => {
             url += `?${queryString}`;
         }
         else if (body) { // For POST, PUT, DELETE methods, add the body to the request options
+            console.log('Body before stringify:', body);
             options.body = JSON.stringify(body);
         }
 
