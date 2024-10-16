@@ -22,9 +22,9 @@ const AllMovies = ({
                 // debugger
                 const hardCode = [
                     {'id': 1, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 2, 'name': 'Inception', 'rating': 8.8},
+                    {'id': 2, 'name': 'Incedfdfd fddfghjhgfds fdfdfdfdfdfdption', 'rating': 8.8},
                     {'id': 3, 'name': 'Inception', 'rating': 8.8},
-                    {'id': 4, 'name': 'Inception', 'rating': 8.8},
+                    {'id': 4, 'name': 'Incedfdfdfdfdfption', 'rating': 8.8},
                     {'id': 5, 'name': 'Inception', 'rating': 8.8},
                     {'id': 6, 'name': 'Inception', 'rating': 8.8},
                     {'id': 7, 'name': 'Inception', 'rating': 8.8},
@@ -116,7 +116,7 @@ const AllMovies = ({
         <div>
             <SearchableDropdown options={options}/>
             Your Movies
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap justify-start gap-[15px]">
                 {movies.map((movie) => (
                     <Movie
                         photo="movie_photo.jpeg"   
@@ -124,6 +124,7 @@ const AllMovies = ({
                         id={movie.id}
                         key={movie.id}
                         city={city}
+                        rating = {movie.rating}
                     />
                 ))}
             </div>
