@@ -10,7 +10,7 @@ const Location = ({
 
     return (
         <div>
-            <div class="h-px bg-gray-500 border-0"></div>
+            <div className="h-px bg-gray-500 border-0"></div>
             <div className="flex h-[70px] my-[20px]">
                 <div className="w-[350px]">
                     <div className="flex justify-between">
