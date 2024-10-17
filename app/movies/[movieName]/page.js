@@ -1,24 +1,21 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation';
+import React from "react";
 import Location from "../../../components/Location";
+import { useSelector } from 'react-redux';
 
-const AllMovies = ({
+const AllLocations = ({
 
 }) => {
-    const router = useRouter();
-    const { locations } = router.query;
+    const locations = useSelector((state) => state.movie.locations);
+    console.log(locations);
 
     debugger
-
     return (
-
         <div>
             Locations
 
         </div>
-
     )
 }
 
-export default AllMovies;
+export default AllLocations;

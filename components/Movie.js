@@ -1,6 +1,9 @@
+"use client";
 import react from "react";
 import makeTheCall from "../utils/api";
+import { useDispatch } from 'react-redux'; // Import useDispatch
 import { useRouter } from 'next/navigation';
+import { setLocations } from "../store/movieSlice";
 
 const Movie = ({
     photo = "movie_photo.jpeg",  // Provide a default image path or URL
@@ -12,7 +15,9 @@ const Movie = ({
 }) => {
 
     console.log("id", id);
-    const router = useRouter(); 
+    const router = useRouter();
+    const dispatch = useDispatch(); // Use useDispatch to get the dispatch function
+ 
 
     const handleOnClick = async (movie_id)=>{
         console.log("movie_id", movie_id);
@@ -22,10 +27,15 @@ const Movie = ({
         
         debugger
         const temp = 67;
-        router.push({
-            pathname: `/movies/${name}`,
-            query: { locations: response['locations'] }  // Pass movieId as a query parameter
-        });
+        // Save data in Redux store
+        if (response && response['locations']) {
+            dispatch(setLocations(response['locations']));
+        }
+        router.push(`/movies/${name}`);
+        // router.push({
+        //     pathname: "/movies/${name}",
+        //     query: { locations: response['locations'] }   
+        // });
 
     }
 
